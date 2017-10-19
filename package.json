@@ -1,0 +1,32 @@
+{
+  "name": "golf-goals-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@types/jest": "^21.1.2",
+    "@types/node": "^8.0.32",
+    "@types/react": "^16.0.9",
+    "@types/react-dom": "^16.0.0",
+    "react-scripts-ts": "2.7.0"
+  },
+  "dependencies": {
+    "@types/react-bootstrap": "^0.31.4",
+    "@types/react-router-dom": "^4.0.8",
+    "bootstrap": "^3.3.7",
+    "firebase": "^4.5.0",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.31.3",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-devtools": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  }
+}
