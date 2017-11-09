@@ -1,38 +1,40 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Menu, Button } from 'semantic-ui-react';
 
 interface Props {
 
 }
+interface State { 
+  activeItem: string 
+}
 
-
-class CustomNavbar extends React.Component<Props, any>{
+class CustomNavbar extends React.Component<Props, State>{
   constructor(props: any){
     super(props);
+    this.state = {
+      activeItem: 'home'
+    }
   }
 
+  navItemClicked(name: string){
+    this.setState({
+      activeItem: name
+    });
+  }
+ 
   render(){
-      return(
-      <div>
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#">Golf Goals</a>
-            </Navbar.Brand>
-          </Navbar.Header>
-          <Nav>
-            <NavItem><Link to="/">Home</Link></NavItem>
-            <NavItem><Link to="/StartRound">Start a Round</Link></NavItem>
-            <NavDropdown eventKey={3} title="Profile" id="basic-nav-dropdown">
-              <MenuItem eventKey={3.1}>My Stats</MenuItem>
-              <MenuItem eventKey={3.2}>Settings</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey={3.3}>Log Out</MenuItem>
-            </NavDropdown>
-        </Nav>
-        </Navbar>
 
+     return(
+      <div>
+        <Menu pointing secondary size="massive">
+          <Menu.Item name='home' active={this.state.activeItem == 'home'} onClick={() => this.navItemClicked('home')}><Link to="/">Home</Link></Menu.Item>
+          <Menu.Item name='start round' active={this.state.activeItem == 'start round'} onClick={() => this.navItemClicked('start round')}><Link to="/StartRound">Start Round</Link></Menu.Item>
+          <Menu.Item name='profile' active={this.state.activeItem == 'profile'} onClick={() => this.navItemClicked('profile')}><Link to="/">Profile</Link></Menu.Item>
+          <Menu.Menu position='right'>
+            <Menu.Item name='log in' active={this.state.activeItem == 'log in'} onClick={() => this.navItemClicked('log in')}><Link to="/"><Button primary>Log In</Button></Link></Menu.Item>
+          </Menu.Menu>
+        </Menu>
       </div>
       )
   }
