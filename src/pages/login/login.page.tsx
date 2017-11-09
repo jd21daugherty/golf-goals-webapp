@@ -4,7 +4,7 @@ interface Props{
   name: string
 }
 
-class Login extends React.Component<Props, any> {
+class LoginPage extends React.Component<Props, any> {
   render(){
     return(
         <h2>Login</h2>
@@ -12,4 +12,4 @@ class Login extends React.Component<Props, any> {
   }
 }
 
-export default Login
+export default LoginPage
