@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-
+import { Header, Container, Button } from 'semantic-ui-react';
+import { Col, Row } from 'react-bootstrap';
 import PickACourseComponent from './components/pick-a-course/pick-a-course.component';
-import { Button } from 'react-bootstrap';
+import StatBoxComponent from '../../components/stat-box/stat-box.component';
+import './styles/start-round.page.css';
 
 class StartARoundPage extends React.Component{
   constructor(props: any){
@@ -16,12 +18,22 @@ class StartARoundPage extends React.Component{
   render(){
     return(
       <div>
-        <h2>Start a Round</h2>
-        <PickACourseComponent name="Josh" />
-        <Link to="/RoundEntry"><Button bsStyle="primary">Start my Round!</Button></Link>
+        <Container content>
+          <Row>   
+          <Col md={3}><Header id="header" as="h1">Start a Round</Header></Col>
+          <Col md={9}><div id="startroundbtn"><Link to="/RoundEntry"><Button primary>Start my Round!</Button></Link></div></Col>
+        </Row>
+        <Row><div id="pickacourse"><PickACourseComponent name="Josh" /></div></Row> 
+        <Row>
+          <Col md={6}><StatBoxComponent /></Col>  
+          <Col md={6}></Col>
+        </Row>       
+        </Container>
       </div>
     )
   }
 }
+
+
 
 export default StartARoundPage;
