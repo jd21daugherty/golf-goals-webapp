@@ -30,9 +30,10 @@ class CustomNavbar extends React.Component<Props, State>{
         <Menu pointing secondary size="massive">
           <Menu.Item name='home' active={this.state.activeItem == 'home'} onClick={() => this.navItemClicked('home')}><Link to="/">Home</Link></Menu.Item>
           <Menu.Item name='start round' active={this.state.activeItem == 'start round'} onClick={() => this.navItemClicked('start round')}><Link to="/StartRound">Start Round</Link></Menu.Item>
+          <Menu.Item name='practice entry' active={this.state.activeItem == 'practice entry'} onClick={() => this.navItemClicked('practice entry')}><Link to="/PracticeEntry">Practice Entry</Link></Menu.Item>
           <Menu.Item name='profile' active={this.state.activeItem == 'profile'} onClick={() => this.navItemClicked('profile')}><Link to="/">Profile</Link></Menu.Item>
           <Menu.Menu position='right'>
-            <Menu.Item name='log in' active={this.state.activeItem == 'log in'} onClick={() => this.navItemClicked('log in')}><Link to="/"><Button primary>Log In</Button></Link></Menu.Item>
+            <Menu.Item name='log in' active={this.state.activeItem == 'log in'} onClick={() => this.navItemClicked('log in')}><Link to="/Login"><Button primary>Log In</Button></Link></Menu.Item>
           </Menu.Menu>
         </Menu>
       </div>

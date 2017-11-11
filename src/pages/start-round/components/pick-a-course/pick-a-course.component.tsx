@@ -11,6 +11,10 @@ var courseOptions = [
   {key: 'lakehefnernorth', value: 'lakehefnernorth', text: 'Lake Hefner (North)'}
 ]
 
+var teeOptions = [
+  {key: 'black', value: '6500', text: 'black'}
+]
+
 class PickACourseComponent extends React.Component<PickCourseProps, any> {
   constructor(props: PickCourseProps){
     super(props);
@@ -21,7 +25,8 @@ class PickACourseComponent extends React.Component<PickCourseProps, any> {
       <div>
         <Col md={12}>
         <Col md={3}><div id="hellomessage">Hello {this.props.name}, pick a course</div></Col>
-        <Col md={9}><div><Dropdown placeholder="Select a Course" fluid search selection options={courseOptions} /></div></Col>
+        <Col md={6}><div><Dropdown placeholder="Select a Course" fluid search selection options={courseOptions} /></div></Col>
+        <Col md={3}><div><Dropdown placeholder="Select a Tee" fluid search selection options={teeOptions} /></div></Col>
         </Col>
       </div>
     )

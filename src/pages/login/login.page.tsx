@@ -7,7 +7,7 @@ interface Props{
 class LoginPage extends React.Component<Props, any> {
   render(){
     return(
-        <h2>Login</h2>
+        <div>Login</div>
     )
   }
 }
