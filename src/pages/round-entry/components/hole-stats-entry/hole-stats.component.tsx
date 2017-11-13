@@ -1,19 +1,23 @@
 import * as React from 'react';
 import FairwayEntryComponent from './components/fairway-entry.component';
 import GirEntryComponent from './components/gir-entry.component';
-import MissedGreenEntryComponent from './components/missedgreen-entry.component';
-import PitchChipSandEntryComponent from './components/pitchchipsand-entry.component';
+import PitchChipEntryComponent from './components/pitchchip-entry.component';
+import SandEntryComponent from './components/sand-entry.component';
 import PuttsEntryComponent from './components/putts-entry.component';
 import ScoreEntryComponent from './components/score-entry.component';
 
-const HoleStatsComponent = () => (
+interface Props{
+  par: number
+}
+
+const HoleStatsComponent = (props: Props) => (
   <div>
+    <ScoreEntryComponent par={props.par} />
     <FairwayEntryComponent />
     <GirEntryComponent />
-    <MissedGreenEntryComponent />
-    <PitchChipSandEntryComponent />
-    <PuttsEntryComponent />
-    <ScoreEntryComponent />
+    <PitchChipEntryComponent />
+    <SandEntryComponent />
+    <PuttsEntryComponent />   
   </div>
 )
 

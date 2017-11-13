@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import { Button } from 'semantic-ui-react';
+import { Row, Col } from 'react-bootstrap';
 
-const PuttsEntryComponent = () => (
+const PitchChipEntryComponent = () => (
   <div>
     <Row>
-    <Col md={2}><div>Putts: </div></Col>
+    <Col md={2}><div>Greenside Chip Shots: </div></Col>
     <Col md={10}>
       <Button size="big" circular>1</Button>
       <Button size="big" circular>2</Button>
@@ -14,8 +14,8 @@ const PuttsEntryComponent = () => (
       <Button size="big" circular>5</Button>
       <Button size="big" circular>+</Button>
     </Col>
-    </Row>   
+    </Row>    
   </div>
 )
 
-export default PuttsEntryComponent;
+export default PitchChipEntryComponent;
