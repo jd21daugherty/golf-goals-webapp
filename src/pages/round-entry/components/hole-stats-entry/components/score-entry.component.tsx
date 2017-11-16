@@ -52,9 +52,11 @@ class ScoreEntryComponent extends React.Component<Props, any>{
     return(
       <div>
         <Row>
+          <Col md={12}>
           <Col md={2}><div>Enter Score: </div></Col>
-          <Col md={10}>
+          <Col md={5}>
             {scoreButtons}
+          </Col>
           </Col>
         </Row>           
       </div>

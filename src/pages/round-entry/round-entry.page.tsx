@@ -29,7 +29,10 @@ class RoundEntryPage extends React.Component<any,State>{
   render(){
     return(
       <div>
-        <CurrentHoleHeaderComponent hole={this.state.onHole} par={this.state.par} />
+        <CurrentHoleHeaderComponent 
+        hole={this.state.onHole} 
+        par={this.state.par} 
+        coursename="Lake Hefner (South)" />
         <HoleStatsComponent par={this.state.par} />
       </div>
 

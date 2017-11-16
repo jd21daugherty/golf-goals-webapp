@@ -1,4 +1,6 @@
 import * as React from 'react';
+import './styles/hole-stats.component.css'
+
 import FairwayEntryComponent from './components/fairway-entry.component';
 import GirEntryComponent from './components/gir-entry.component';
 import PitchChipEntryComponent from './components/pitchchip-entry.component';
@@ -11,13 +13,13 @@ interface Props{
 }
 
 const HoleStatsComponent = (props: Props) => (
-  <div>
-    <ScoreEntryComponent par={props.par} />
-    <FairwayEntryComponent />
-    <GirEntryComponent />
-    <PitchChipEntryComponent />
-    <SandEntryComponent />
-    <PuttsEntryComponent />   
+  <div id="holestats">
+    <div className="statentry"><ScoreEntryComponent par={props.par} /></div>
+    <div className="statentry"><FairwayEntryComponent /></div>
+    <div className="statentry"><GirEntryComponent /></div>
+    <div className="statentry"><PitchChipEntryComponent /></div>
+    <div className="statentry"><SandEntryComponent /></div>
+    <div className="statentry"><PuttsEntryComponent /> </div>  
   </div>
 )
 
