@@ -1,0 +1,43 @@
+#currentholeheader{
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+#holenumber{
+    float: left;
+    font-size: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#coursename{
+    float: left;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#parindicator{
+    float: left;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+#yardage{
+    float: left;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+#totalscore{
+    font-size: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
