@@ -5,14 +5,13 @@ import { Col, Row } from 'react-bootstrap';
 import PickACourseComponent from './components/pick-a-course/pick-a-course.component';
 import StatBoxComponent from '../../components/stat-box/stat-box.component';
 import './styles/start-round.page.css';
+import { connect } from 'react-redux';
+import { startRound } from '../../services/start-round/actions/start-round.actions';
+import { CourseOptions } from '../../services/start-round/actions/start-round.actions';
 
-class StartARoundPage extends React.Component{
+class StartARoundPage extends React.Component<any, any>{
   constructor(props: any){
     super(props);
-  }
-
-  startRound(){
-    console.log("clicked start round");
   }
 
   render(){
@@ -34,6 +33,15 @@ class StartARoundPage extends React.Component{
   }
 }
 
+const mapStateToProps = (state: any) => ({
+
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  startRound: (courseOptions: CourseOptions) => {
+    dispatch(startRound(courseOptions));
+  }
+});
 
 
-export default StartARoundPage;
+export default connect(mapStateToProps, mapDispatchToProps)(StartARoundPage);
