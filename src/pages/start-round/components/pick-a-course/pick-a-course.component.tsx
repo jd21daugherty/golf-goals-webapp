@@ -8,8 +8,8 @@ interface PickCourseProps{
 }
 
 var courseOptions = [
-  {key: 'lakehefnersouth', value: 'lakehefnersouth', text: 'Lake Hefner (South)'},
-  {key: 'lakehefnernorth', value: 'lakehefnernorth', text: 'Lake Hefner (North)'}
+  {key: 'lakehefnersouth', value: 'Lake Hefner (South)', text: 'Lake Hefner (South)'},
+  {key: 'lakehefnernorth', value: 'Lake Hefner (North)', text: 'Lake Hefner (North)'}
 ]
 
 var teeOptions = [
