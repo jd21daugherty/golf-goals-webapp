@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import { changeHoleReducer } from './round-entry/reducers/change-hole.reducer';
+import { ChangeHoleReducer } from './round-entry/reducers/change-hole.reducer';
+import { StartRoundReducer } from './start-round/reducers/start-round.reducer';
 
 let rootReducer: any = combineReducers({
-    currentHole: changeHoleReducer
+    currentHoleState: ChangeHoleReducer,
+    startRoundState: StartRoundReducer
 });
 
 export default rootReducer;

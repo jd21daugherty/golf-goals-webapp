@@ -44,7 +44,7 @@ class RoundEntryPage extends React.Component<any, any>{
 }
 
 const mapStateToProps = (state: any) => ({
-  onHole: state.currentHole.currentHole
+  onHole: state.currentHoleState.currentHole
 });
 
 const mapDispatchToProps = (dispatch: any) => ({
