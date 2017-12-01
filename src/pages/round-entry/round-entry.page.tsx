@@ -27,7 +27,7 @@ class RoundEntryPage extends React.Component<any, any>{
         <CurrentHoleHeaderComponent 
         hole={this.props.onHole} 
         par={4} 
-        coursename="Lake Hefner (South)" />
+        coursename={this.props.selectedCourse} />
         <HoleStatsComponent par={4} />
       </Col>
       <Col md={1}>
@@ -44,7 +44,9 @@ class RoundEntryPage extends React.Component<any, any>{
 }
 
 const mapStateToProps = (state: any) => ({
-  onHole: state.currentHoleState.currentHole
+  onHole: state.currentHoleState.currentHole,
+  selectedCourse: state.startRoundState.name,
+  selectedTeeLength: state.startRoundState.tee
 });
 
 const mapDispatchToProps = (dispatch: any) => ({

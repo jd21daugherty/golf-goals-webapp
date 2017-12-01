@@ -11,43 +11,28 @@ class ScoreEntryComponent extends React.Component<Props, any>{
     super(props)
   }
   render(){
-    let scoreButtons;
+    let scoreButtons = [];
 
-    if(this.props.par == 3){
-      scoreButtons = 
-      <div>
-        <Button size="big">1</Button>
-        <Button size="big">2</Button>
-        <Button size="big">3</Button>
-        <Button size="big">4</Button>
-        <Button size="big">5</Button>
-      </div>
+    if(this.props.par == 3){     
+      for(let i=1; i<6; i++){
+        scoreButtons.push(<Button size="big" key={i}>{i}</Button>);
+      }
     }
 
     if(this.props.par == 4){
-      scoreButtons = 
-      <div>
-        <Button size="big">2</Button>
-        <Button size="big">3</Button>
-        <Button size="big">4</Button>
-        <Button size="big">5</Button>
-        <Button size="big">6</Button>
-        <Button size="big">+</Button>
-      </div>
+      for(let i=2; i<7; i++){
+        scoreButtons.push(<Button size="big" key={i}>{i}</Button>);
+      }
     }
 
     if(this.props.par == 5){
-      scoreButtons = 
-      <div>
-        <Button size="big">2</Button>
-        <Button size="big">3</Button>
-        <Button size="big">4</Button>
-        <Button size="big">5</Button>
-        <Button size="big">6</Button>
-        <Button size="big">7</Button>
-        <Button size="big">+</Button>
-      </div>
+      for(let i=2; i<8; i++){
+        scoreButtons.push(<Button size="big" key={i}>{i}</Button>);
+      }
+
     }
+
+    scoreButtons.push(<Button size="big">+</Button>)
 
     return(
       <div>
