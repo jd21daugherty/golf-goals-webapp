@@ -7,6 +7,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import * as firebase from 'firebase';
 
+import { Provider } from 'react-redux';
+import configureStore from './services/configure-store';
+//import StateModel from './models/state';
+
 var config = {
     apiKey: "AIzaSyA25Ldz-AV_doatvD8F36CaMqE9t-Fhgag",
     authDomain: "golf-goals.firebaseapp.com",
@@ -18,8 +22,21 @@ var config = {
 
 firebase.initializeApp(config);
 
+// define an initial state for the application here
+//let initialState: StateModel = {
+//  currentHole: 1
+//}
+
+const store = configureStore();
+
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>
+  ,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
+
+
+ 
